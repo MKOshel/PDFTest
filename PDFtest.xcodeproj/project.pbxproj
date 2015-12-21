@@ -13,6 +13,9 @@
 		E64D8EC41C28022600FE888B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64D8EC21C28022600FE888B /* Main.storyboard */; };
 		E64D8EC61C28022600FE888B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64D8EC51C28022600FE888B /* Assets.xcassets */; };
 		E64D8EC91C28022600FE888B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64D8EC71C28022600FE888B /* LaunchScreen.storyboard */; };
+		E650DC561C28160A00123F84 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = E650DC551C28160A00123F84 /* PDFView.m */; };
+		E650DC581C28163000123F84 /* PDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E650DC571C28163000123F84 /* PDFView.xib */; };
+		E650DC5A1C28512D00123F84 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E650DC591C28512D00123F84 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		E64D8EC51C28022600FE888B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E64D8EC81C28022600FE888B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E64D8ECA1C28022600FE888B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E650DC541C28160A00123F84 /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		E650DC551C28160A00123F84 /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
+		E650DC571C28163000123F84 /* PDFView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFView.xib; sourceTree = "<group>"; };
+		E650DC591C28512D00123F84 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E650DC5A1C28512D00123F84 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 		E64D8EAD1C28022500FE888B = {
 			isa = PBXGroup;
 			children = (
+				E650DC591C28512D00123F84 /* MessageUI.framework */,
 				E64D8EB81C28022600FE888B /* PDFtest */,
 				E64D8EB71C28022500FE888B /* Products */,
 			);
@@ -67,6 +76,9 @@
 				E64D8EC71C28022600FE888B /* LaunchScreen.storyboard */,
 				E64D8ECA1C28022600FE888B /* Info.plist */,
 				E64D8EB91C28022600FE888B /* Supporting Files */,
+				E650DC541C28160A00123F84 /* PDFView.h */,
+				E650DC551C28160A00123F84 /* PDFView.m */,
+				E650DC571C28163000123F84 /* PDFView.xib */,
 			);
 			path = PDFtest;
 			sourceTree = "<group>";
@@ -137,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64D8EC91C28022600FE888B /* LaunchScreen.storyboard in Resources */,
+				E650DC581C28163000123F84 /* PDFView.xib in Resources */,
 				E64D8EC61C28022600FE888B /* Assets.xcassets in Resources */,
 				E64D8EC41C28022600FE888B /* Main.storyboard in Resources */,
 			);
@@ -150,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64D8EC11C28022600FE888B /* ViewController.m in Sources */,
+				E650DC561C28160A00123F84 /* PDFView.m in Sources */,
 				E64D8EBE1C28022600FE888B /* AppDelegate.m in Sources */,
 				E64D8EBB1C28022600FE888B /* main.m in Sources */,
 			);
@@ -264,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PDFtest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tellence.PDFtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PDFtest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tellence.PDFtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +316,7 @@
 				E64D8ECF1C28022600FE888B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
