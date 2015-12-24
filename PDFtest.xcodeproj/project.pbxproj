@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60847271C2C1BA4009BBFBD /* PDFCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E60847251C2C1BA3009BBFBD /* PDFCell.m */; };
+		E60847281C2C1BA4009BBFBD /* PDFCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E60847261C2C1BA3009BBFBD /* PDFCell.xib */; };
 		E64D8EBB1C28022600FE888B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D8EBA1C28022600FE888B /* main.m */; };
 		E64D8EBE1C28022600FE888B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D8EBD1C28022600FE888B /* AppDelegate.m */; };
 		E64D8EC11C28022600FE888B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D8EC01C28022600FE888B /* ViewController.m */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60847241C2C1BA3009BBFBD /* PDFCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFCell.h; sourceTree = "<group>"; };
+		E60847251C2C1BA3009BBFBD /* PDFCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFCell.m; sourceTree = "<group>"; };
+		E60847261C2C1BA3009BBFBD /* PDFCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFCell.xib; sourceTree = "<group>"; };
 		E64D8EB61C28022500FE888B /* PDFtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D8EBA1C28022600FE888B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E64D8EBC1C28022600FE888B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,13 +77,16 @@
 				E64D8EBF1C28022600FE888B /* ViewController.h */,
 				E64D8EC01C28022600FE888B /* ViewController.m */,
 				E64D8EC21C28022600FE888B /* Main.storyboard */,
+				E650DC541C28160A00123F84 /* PDFView.h */,
+				E650DC551C28160A00123F84 /* PDFView.m */,
+				E650DC571C28163000123F84 /* PDFView.xib */,
 				E64D8EC51C28022600FE888B /* Assets.xcassets */,
 				E64D8EC71C28022600FE888B /* LaunchScreen.storyboard */,
 				E64D8ECA1C28022600FE888B /* Info.plist */,
 				E64D8EB91C28022600FE888B /* Supporting Files */,
-				E650DC541C28160A00123F84 /* PDFView.h */,
-				E650DC551C28160A00123F84 /* PDFView.m */,
-				E650DC571C28163000123F84 /* PDFView.xib */,
+				E60847241C2C1BA3009BBFBD /* PDFCell.h */,
+				E60847251C2C1BA3009BBFBD /* PDFCell.m */,
+				E60847261C2C1BA3009BBFBD /* PDFCell.xib */,
 			);
 			path = PDFtest;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			files = (
 				E64D8EC91C28022600FE888B /* LaunchScreen.storyboard in Resources */,
 				E650DC581C28163000123F84 /* PDFView.xib in Resources */,
+				E60847281C2C1BA4009BBFBD /* PDFCell.xib in Resources */,
 				E64D8EC61C28022600FE888B /* Assets.xcassets in Resources */,
 				E64D8EC41C28022600FE888B /* Main.storyboard in Resources */,
 			);
@@ -166,6 +175,7 @@
 				E650DC561C28160A00123F84 /* PDFView.m in Sources */,
 				E64D8EBE1C28022600FE888B /* AppDelegate.m in Sources */,
 				E64D8EBB1C28022600FE888B /* main.m in Sources */,
+				E60847271C2C1BA4009BBFBD /* PDFCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
