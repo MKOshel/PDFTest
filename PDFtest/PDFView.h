@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelNumber;
 @property (strong, nonatomic) IBOutlet UILabel *labelClient;
 
+@property (strong, nonatomic) IBOutlet UILabel *labelDate;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewBIll;
 
 @property (strong, nonatomic) IBOutlet UIView *viewServices;

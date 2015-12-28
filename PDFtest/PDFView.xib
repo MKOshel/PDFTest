@@ -264,6 +264,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="labelClient" destination="jUV-VF-sZ6" id="C59-Mg-LNG"/>
+                <outlet property="labelDate" destination="XNj-PS-DuG" id="aEa-Oq-PaE"/>
                 <outlet property="labelNumber" destination="35F-wR-IBj" id="fIo-D2-f0z"/>
                 <outlet property="tableViewBIll" destination="qEF-Ri-m9f" id="6Qo-1p-5qu"/>
                 <outlet property="viewFCT" destination="SsU-Bb-QT6" id="khY-se-3UA"/>

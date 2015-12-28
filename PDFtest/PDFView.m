@@ -32,6 +32,7 @@
     self.layer.borderWidth = 1.0;
     
     _labelNumber.text = @"Serie FCT nr: R5688TFC";
+    _labelDate.text =[[[NSDateFormatter alloc]init] stringFromDate:[NSDate date]];
     _viewFCT.layer.borderWidth = 1.0;
     _viewFCT.layer.borderColor = [UIColor blackColor].CGColor;
     
