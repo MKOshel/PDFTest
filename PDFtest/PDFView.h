@@ -11,6 +11,10 @@
 @interface PDFView : UIView
 @property (strong, nonatomic) IBOutlet UIView *viewFCT;
 @property (strong, nonatomic) IBOutlet UILabel *labelNumber;
--(void)setupBill;
+@property (strong, nonatomic) IBOutlet UILabel *labelClient;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableViewBIll;
+
+@property (strong, nonatomic) IBOutlet UIView *viewServices;
+@property (strong, nonatomic) IBOutlet UIView *viewSignature;
 @end

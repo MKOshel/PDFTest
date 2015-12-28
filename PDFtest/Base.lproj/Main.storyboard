@@ -25,17 +25,43 @@
                                     <action selector="beginSendingPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Jh-yi-y4T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Client: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUg-qg-LH6">
+                                <rect key="frame" x="40" y="38" width="54" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9mF-Wd-hL5">
+                                <rect key="frame" x="102" y="34" width="187" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rEa-dE-trb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ut-us-2MA"/>
                             <constraint firstItem="rEa-dE-trb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WWa-ez-3kf"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mVH-MO-8p6" appends="YES" id="jVR-Xh-bfO"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="tfClient" destination="9mF-Wd-hL5" id="a4L-gO-3iJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mVH-MO-8p6">
+                    <connections>
+                        <action selector="dropKeyboard:" destination="BYZ-38-t0r" id="OuY-1o-Hg5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="234" y="236"/>
         </scene>
     </scenes>
 </document>

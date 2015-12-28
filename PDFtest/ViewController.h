@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *tfClient;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PDFView.h"
+#import "PDFCell.h"
 
 @interface ViewController ()
 {
@@ -31,10 +32,41 @@
     
     pdfView = [[[NSBundle mainBundle] loadNibNamed:@"PDFView" owner:self options:nil] objectAtIndex:0];
     
+    [self setupProductsTableView];
 //    
 //    [self savePDF:[self generatePDF] toFile:pdfPath];
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 7;
+}
+
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PDFCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.labelCount.text = [NSString stringWithFormat:@"%d",indexPath.row+1];
+    
+    return cell;
+}
+
+
+-(void)setupProductsTableView
+{
+    [pdfView.tableViewBIll registerNib:[UINib nibWithNibName:@"PDFCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    pdfView.tableViewBIll.delegate = self;
+    pdfView.tableViewBIll.dataSource = self;
 }
 
 
@@ -67,21 +99,29 @@
 
 - (IBAction)beginSendingPDF:(id)sender {
     
-    [pdfView setupBill];
-
+    pdfView.labelClient.text =[NSString stringWithFormat:@"%@ %@",pdfView.labelClient.text, _tfClient.text];
     
     [self emailPDF:[self generatePDF]];
 }
+
+
+
+- (IBAction)dropKeyboard:(UITapGestureRecognizer *)sender {
+    
+    [self.view endEditing:YES];
+}
+
+
 
 
 - (void)emailPDF:(NSData*)pdfData {
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     
     picker.mailComposeDelegate = self;
-    [picker setSubject:@"Sending PDF"];
+    [picker setSubject:@"Factura PDF"];
     [picker addAttachmentData:pdfData mimeType:@"application/pdf"
-                     fileName:[NSString stringWithFormat:@"Bill.pdf"]];
-    [picker setMessageBody:@"Here's the PDF you wanted." isHTML:YES];
+                     fileName:[NSString stringWithFormat:@"NessusBill.pdf"]];
+    [picker setMessageBody:@"Atasat gasesti factura dorita." isHTML:YES];
     
     
     [self presentViewController:picker

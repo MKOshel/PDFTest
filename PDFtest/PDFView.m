@@ -21,15 +21,25 @@
 
 -(void)awakeFromNib
 {
-    
+
+    [self setupBill];
 }
 
 
 -(void)setupBill
 {
-    _labelNumber.text = @"R5688TFC";
+    self.layer.borderColor = [UIColor blackColor].CGColor;
+    self.layer.borderWidth = 1.0;
+    
+    _labelNumber.text = @"Serie FCT nr: R5688TFC";
     _viewFCT.layer.borderWidth = 1.0;
     _viewFCT.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    _viewServices.layer.borderColor = [UIColor blackColor].CGColor;
+    _viewServices.layer.borderWidth = 1.0;
+    _viewSignature.layer.borderColor = [UIColor blackColor].CGColor;
+    _viewSignature.layer.borderWidth = 1.0;
+    
 
 }
 
