@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface RequestManager : NSObject
+@property(nonatomic,strong) AFHTTPSessionManager* sessionManager;
+@property(nonatomic,strong) AFJSONRequestSerializer* serializer;
++(RequestManager*)instance;
+
+
+-(void)createUserWithEmail:(NSString*)mail password:(NSString*)pass isAdmin:(BOOL)isAdmin;
 
 @end

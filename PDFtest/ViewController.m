@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PDFView.h"
 #import "PDFCell.h"
+#import "RequestManager.h"
 
 @interface ViewController ()
 {
@@ -99,9 +100,11 @@
 
 - (IBAction)beginSendingPDF:(id)sender {
     
-    pdfView.labelClient.text =[NSString stringWithFormat:@"%@ %@",pdfView.labelClient.text, _tfClient.text];
+//    pdfView.labelClient.text =[NSString stringWithFormat:@"%@ %@",pdfView.labelClient.text, _tfClient.text];
+//    
+//    [self emailPDF:[self generatePDF]];
     
-    [self emailPDF:[self generatePDF]];
+    [[RequestManager instance] createUserWithEmail:@"test@me.ro" password:@"password" isAdmin:NO];
 }
 
 
